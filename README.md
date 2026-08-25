@@ -79,7 +79,7 @@ Ho Chi Minh City–based Business Analyst & QA Tester who also builds. I run req
 ### 💼 Experience
 
 - **Business Analyst & QA Tester** · Geta Technology · *May 2026 → Present*
-- **Business Analyst, QA & UI/UX Designer** · PiStudy Education and Solution JSC · *Aug 2025 → Jan 2026*
+- **Business Analyst, QA & UI/UX Designer** · PiStudy Education and Solution JSC *(Freelance / external collaboration)* · *Aug 2025 → Jan 2026*
 - **Business Analyst & Tester** · International Link Corporation (Saigon Language School) · *May 2025 → May 2026*
 - **Programming Instructor** · MindX Technology School · *Mar 2024 → Present*
 - **Data Analyst Intern** · Pulse Active · *2023 → 2024*
