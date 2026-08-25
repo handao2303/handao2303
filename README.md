@@ -86,13 +86,4 @@ Ho Chi Minh City–based Business Analyst & QA Tester who also builds. I run req
 
 ---
 
-### 📊 GitHub Stats
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=handao2303&show_icons=true&hide_border=true&count_private=true&title_color=6C63D1&icon_color=E8399C&text_color=333" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=handao2303&layout=compact&hide_border=true&title_color=6C63D1&text_color=333" />
-</p>
-
----
-
 <p align="center"><i>📫 Open to Business Analyst / QA / full-stack opportunities — reach out at baohandao2303@gmail.com</i></p>
