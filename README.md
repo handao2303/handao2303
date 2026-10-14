@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/avatar-sketch.jpg" width="140" alt="Pencil sketch of Han Dao" />
+<a href="https://dao-thuy-bao-han.kamila-comme.workers.dev"><img src="assets/profile-card.gif" width="300" alt="About me card: Han Dao, 22, Business Analyst — user stories, workflow optimization" /></a>
 
 # Dao Thuy Bao Han
 
@@ -86,14 +86,6 @@ Cleaned and cross-checked registration data for marathons of **10,000+ and 9,000
 ---
 
 ## 🎬 The B-sides — projects
-
-<div align="center">
-
-<a href="https://github.com/handao2303/tech-store-cross-platform"><img src="assets/techstore-demo.gif" width="600" alt="Tech Store Android app walkthrough: product list, best sellers and product cards" /></a>
-
-<sub>▶ <b>Now screening</b> · Tech Store — the Android app, live on one Firestore source of truth</sub>
-
-</div>
 
 | Project | Problem → outcome | |
 |---|---|---|
