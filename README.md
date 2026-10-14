@@ -87,6 +87,14 @@ Cleaned and cross-checked registration data for marathons of **10,000+ and 9,000
 
 ## 🎬 The B-sides — projects
 
+<div align="center">
+
+<a href="https://github.com/handao2303/tech-store-cross-platform"><img src="assets/techstore-demo.gif" width="600" alt="Tech Store Android app walkthrough: product list, best sellers and product cards" /></a>
+
+<sub>▶ <b>Now screening</b> · Tech Store — the Android app, live on one Firestore source of truth</sub>
+
+</div>
+
 | Project | Problem → outcome | |
 |---|---|---|
 | **Banking Automation** · Lead BA | Manual KYC, Excel reconciliation and card limits with no concurrency control → a BRD that automates all three: **30 requirements, 18 use cases, 26 business rules, 18 Gherkin stories**. AML/PEP rule independent and non-overridable; the race-condition risk turned into a measurable **< 2 s SLA**. Circular 17/2024/TT-NHNN, ISO 20022 / 8583, PCI DSS. | eKYC demo on the [portfolio](https://dao-thuy-bao-han.kamila-comme.workers.dev) |
