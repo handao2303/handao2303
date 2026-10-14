@@ -1,89 +1,134 @@
-### 👋 DAO THUY BAO HAN
+<div align="center">
 
-**Business Analyst & QA Tester — turning messy workflows into specs a dev team can build from, then testing the result until it's provably correct.**
+<img src="assets/avatar-sketch.jpg" width="140" alt="Pencil sketch of Han Dao" />
 
-[![Email](https://img.shields.io/badge/Email-baohandao2303%40gmail.com-6C63D1?style=for-the-badge&logo=gmail&logoColor=white)](mailto:baohandao2303@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Han%20Dao-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/h%C3%A2n-%C4%91%C3%A0o-0b12b72a3/)
-[![Phone](https://img.shields.io/badge/Phone-%2B84%20915%20525%20715-E8399C?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+84915525715)
-[![Location](https://img.shields.io/badge/Location-Ho%20Chi%20Minh%20City%2C%20Vietnam-22C55E?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
+# Dao Thuy Bao Han
 
----
+**Business Analyst · ERP, Fintech & EdTech**
 
-### 🧭 About Me
+*I go backstage to see how a business really runs, then write the setlist a dev team can play from:*
+*As-Is / To-Be, BRD, UI, UAT and go-live.*
 
-Ho Chi Minh City–based Business Analyst & QA Tester who also builds. I run requirement elicitation, write BRDs/SRS/RTMs, and design UAT plans — then, when it's useful, I sit down and ship the actual system myself (backend, frontend, infra) so the spec and the built product never drift apart. Recent work spans **fintech process automation**, a **K-12 EdTech platform**, **e-commerce**, and **library systems**, with a habit of auditing my own work for security and data-quality gaps before anyone else finds them.
+[![Portfolio](https://img.shields.io/badge/Backstage%20Pass-portfolio-C1CFA1?style=for-the-badge&labelColor=23281F)](https://dao-thuy-bao-han.kamila-comme.workers.dev)
+[![Email](https://img.shields.io/badge/Email-baohandao2303%40gmail.com-E7CCCC?style=for-the-badge&logo=gmail&logoColor=23281F&labelColor=23281F)](mailto:baohandao2303@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Han%20Dao-A5B68D?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=23281F)](https://www.linkedin.com/in/h%C3%A2n-%C4%91%C3%A0o-0b12b72a3/)
+[![Location](https://img.shields.io/badge/Base-Ho%20Chi%20Minh%20City-D9B1AB?style=for-the-badge&labelColor=23281F)](#)
 
-- 🔍 BA methods: requirement elicitation, As-Is/To-Be mapping, BRD/SRS, RTM, MoSCoW, RACI, Gherkin/BDD
-- 🧪 QA practice: manual testing, UAT, test case design, defect tracking, access-control (RBAC) audits
-- 🛠️ Also the one who builds it: full-stack delivery across NestJS, Express, Next.js, React, and Firebase/Postgres
-- 🎓 Business Information Systems student at Ton Duc Thang University (2022–2026)
+</div>
 
 ---
 
-### 🧰 Tech Stack
+## 🎟️ Backstage pass
 
-**Data & Backend**
-
-![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-3C3C3C?style=for-the-badge&logo=express&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-DD2C00?style=for-the-badge&logo=firebase&logoColor=white)
-
-**Frontend**
-
-![React](https://img.shields.io/badge/React-087EA4?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
-**Tools & Collaboration**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
-![Confluence](https://img.shields.io/badge/Confluence-2684FF?style=for-the-badge&logo=confluence&logoColor=white)
-
-**Business Analysis & QA**
-
-![Requirement Elicitation](https://img.shields.io/badge/Requirement%20Elicitation-6C63D1?style=flat-square)
-![BRD/SRS](https://img.shields.io/badge/BRD%20%2F%20SRS-6C63D1?style=flat-square)
-![RTM](https://img.shields.io/badge/RTM-6C63D1?style=flat-square)
-![MoSCoW](https://img.shields.io/badge/MoSCoW-6C63D1?style=flat-square)
-![RACI](https://img.shields.io/badge/RACI-6C63D1?style=flat-square)
-![Gherkin/BDD](https://img.shields.io/badge/Gherkin%20%2F%20BDD-6C63D1?style=flat-square)
-![UAT](https://img.shields.io/badge/UAT-E8399C?style=flat-square)
-![Manual Testing](https://img.shields.io/badge/Manual%20Testing-E8399C?style=flat-square)
-![RBAC Audit](https://img.shields.io/badge/RBAC%20Audit-E8399C?style=flat-square)
-![Agile/Scrum](https://img.shields.io/badge/Agile%20%2F%20Scrum-E8399C?style=flat-square)
-
----
-
-### 🚀 Featured Projects
-
-| Project | What it is |
+| | |
 |---|---|
-| **[Library Management System](https://github.com/handao2303/library-management-system)** | Full-stack library system (NestJS/TypeORM + React/Vite) — built and QA-tested it myself, found and patched a privilege-escalation and a broken-access-control vulnerability. |
-| **[Tech Store — E-Commerce Platform](https://github.com/handao2303/tech-store-cross-platform)** | 4-service monorepo (React admin, Express API, Android app, Stripe-integrated mobile API) on a shared Firebase backend. |
-| **[TaskFlow — SaaS Metrics Analysis](https://github.com/handao2303/taskflow-saas-metrics)** | Reconstructed MRR/churn/NRR/LTV:CAC from a Stripe-style event ledger with a Streamlit + Plotly dashboard. |
-| **Banking Automation System** | Led BA for a bank's eKYC, auto-reconciliation, and real-time credit-limit modernization program — BRD, 18 use cases, RTM, RBAC/compliance rule design. |
+| **Full BA lifecycle** | discovery → BRD → UI → UAT → go-live, since 2023 |
+| **4 industries** | ERP · Fintech · EdTech · Data |
+| **Now** | Business Analyst at Geta Technology — Geta Finance (ERP) and Geta Media (sales & content portal) |
+| **Education** | B.Sc. Computer Science, Ton Duc Thang University (2022 – 2026) |
+
+**How I work** — every project starts from the problem, not the feature list:
+
+```mermaid
+flowchart LR
+    A[Discovery<br/>stakeholders] --> B[As-Is<br/>how it really runs]
+    B --> C{Gap<br/>root cause}
+    C --> D[To-Be<br/>process + rules]
+    D --> E[BRD / SRS<br/>use cases · RTM]
+    E --> F[UI in Figma<br/>validated flows]
+    F --> G[UAT<br/>Gherkin criteria]
+    G --> H((Go-live))
+```
 
 ---
 
-### 💼 Experience
+## 🎤 The tour — experience
 
-- **Business Analyst & QA Tester** · Geta Technology · *May 2026 → Present*
-- **Business Analyst, QA & UI/UX Designer** · PiStudy Education and Solution JSC *(Freelance / external collaboration)* · *Aug 2025 → Jan 2026*
-- **Business Analyst & Tester** · International Link Corporation (Saigon Language School) · *May 2025 → May 2026*
-- **Programming Instructor** · MindX Technology School · *Mar 2024 → Present*
-- **Data Analyst Intern** · Pulse Active · *2023 → 2024*
+### Geta Technology · Business Analyst · *May 2026 → now*
+A multi-industry group selling across **8 business lines** through **83 Facebook fanpages** and Zalo. I own requirements and quality for its two internal products.
+
+- **The problem:** 83 inboxes with no single view, one customer scattered across pages, the same price questions typed by hand, orders written up twice, and finance built from separate spreadsheets.
+- **Geta Media** — one portal, one sign-in, 9 tools: a shared inbox for every fanpage and Zalo, one profile per customer (merged by phone number), a bot with 3 modes that **never invents a price**, and chat → appointment → quote → invoice in a few clicks. Content (AI rewrite → human approval → Fanpage, YouTube, TikTok) and WordPress SEO fixes all pass the same approval gate.
+- **Geta Finance (ERP)** — 7 role-based workspaces behind one login: Admin, Accounting, Warehouse, Employee, Field sales, Tasks and Orders (7 stages from site measurement to handover). Orders confirmed in Geta Media flow straight into it as signed events.
+- Designed the workflow for an AI multi-agent system (1 orchestrator + 3 sub-agents) with guardrails: drafts queued for approval, unusual amounts blocked in code, no tools to delete or move money.
+
+```mermaid
+flowchart LR
+    subgraph Channels
+      FB[83 fanpages]
+      ZL[Zalo]
+      WP[WordPress sites]
+      TT[TikTok · YouTube]
+    end
+    Channels --> P[Geta Media portal<br/>one sign-in · role-based tabs]
+    P --> S[Sales & care<br/>inbox · CRM · bot]
+    P --> C[Content<br/>AI draft · schedule]
+    P --> W[Web & SEO<br/>audit · fixes]
+    S & C & W --> G{{Human approval gate}}
+    G --> O[Appointment → quote → invoice]
+    O -- signed order --> ERP[(Geta Finance ERP<br/>7 workspaces)]
+```
+
+### International Link Corporation (Saigon Language School) · BA & Tester · *May 2025 → May 2026*
+Replaced file-based operations — spreadsheets and shared OneDrive folders for **60+ instructors, ~4,000 learners and 30 corporate classes** — with one platform.
+- Traced two business risks to their root cause: **instructor double-booking** and **file access never revoked** for leavers.
+- Authored the BRD end to end: **40 functional requirements, 9 business rules, 8 NFRs across 7 modules, 9 actor roles**, MoSCoW-ranked and traced in an RTM — including rules that block double-booking at scheduling time and tie data access to roles.
+
+### PiStudy Education and Solution JSC · BA & UI/UX Designer (freelance) · *Aug 2025 → Jan 2026*
+Turned **6 K-12 programs into one product** with two very different ways in — student self-signup and provisioned teacher / institution accounts — on one user model. Designed the sign-up and login UI with its validation rules in Figma. **Live at Huỳnh Khương Ninh Secondary School, ~1,000 students across 4 grades.**
+
+### MindX Technology School · Coding & Robotics Instructor · *Mar 2024 → now*
+~30 classes, ~210–240 students aged 4–18, **100% course completion**. Sole point of contact for parents: flag students early, agree a support plan, check it worked — the same loop a BA runs with stakeholders.
+
+### Pulse Active · Data Analyst Intern · *2023 → 2024*
+Cleaned and cross-checked registration data for marathons of **10,000+ and 9,000+ runners**, catching duplicates and payment mismatches before race day; built the dashboards leadership used for go / no-go decisions.
 
 ---
 
-<p align="center"><i>📫 Open to Business Analyst / QA / full-stack opportunities — reach out at baohandao2303@gmail.com</i></p>
+## 🎬 The B-sides — projects
+
+| Project | Problem → outcome | |
+|---|---|---|
+| **Banking Automation** · Lead BA | Manual KYC, Excel reconciliation and card limits with no concurrency control → a BRD that automates all three: **30 requirements, 18 use cases, 26 business rules, 18 Gherkin stories**. AML/PEP rule independent and non-overridable; the race-condition risk turned into a measurable **< 2 s SLA**. Circular 17/2024/TT-NHNN, ISO 20022 / 8583, PCI DSS. | eKYC demo on the [portfolio](https://dao-thuy-bao-han.kamila-comme.workers.dev) |
+| **[Library Management](https://github.com/handao2303/library-management-system)** | Business rules (borrow quotas, FIFO approval, penalties) turned into a layered test strategy: **42 unit, 17 integration / E2E, 14 exploratory** cases in CI. Found and fixed a privilege escalation, a broken-access-control gap and an integer overflow in a DB trigger. | NestJS · React · GitHub Actions |
+| **[Tech Store](https://github.com/handao2303/tech-store-cross-platform)** | Web admin + native Android app on one Firestore source of truth: 4 services, Stripe checkout, real-time stock, chat and campaigns — documented as an architecture dossier. | React · Express · Android · Firebase |
+| **[TaskFlow](https://github.com/handao2303/taskflow-saas-metrics)** | A raw Stripe-style ledger → 8 SaaS metrics reconciled to **$0 variance**. Finding: MRR **~70x** but NRR only **98.7%**; Referral LTV:CAC **28.7 : 1** vs Paid Ads 2.0 : 1. Written as Finding → So what → Recommendation. | Python · pandas · Streamlit |
+
+---
+
+## 🧰 Toolkit
+
+**Analysis** &nbsp;
+![Elicitation](https://img.shields.io/badge/Requirements%20Elicitation-C1CFA1?style=flat-square)
+![As-Is/To-Be](https://img.shields.io/badge/As--Is%20%2F%20To--Be-C1CFA1?style=flat-square)
+![BRD/SRS](https://img.shields.io/badge/BRD%20%2F%20SRS-C1CFA1?style=flat-square)
+![Use cases](https://img.shields.io/badge/Use%20Cases%20%26%20User%20Stories-C1CFA1?style=flat-square)
+![Business rules](https://img.shields.io/badge/Business%20Rules%20%26%20Decision%20Tables-C1CFA1?style=flat-square)
+![MoSCoW](https://img.shields.io/badge/MoSCoW-A5B68D?style=flat-square)
+![RTM](https://img.shields.io/badge/RTM-A5B68D?style=flat-square)
+![Gherkin](https://img.shields.io/badge/Gherkin%20Acceptance%20Criteria-A5B68D?style=flat-square)
+![UAT](https://img.shields.io/badge/UAT-A5B68D?style=flat-square)
+![Agile](https://img.shields.io/badge/Agile%20%2F%20Scrum-A5B68D?style=flat-square)
+
+**Tools** &nbsp;
+![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white)
+![Confluence](https://img.shields.io/badge/Confluence-172B4D?style=flat-square&logo=confluence&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![draw.io](https://img.shields.io/badge/draw.io-F08705?style=flat-square&logo=diagramsdotnet&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![React](https://img.shields.io/badge/React-087EA4?style=flat-square&logo=react&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
+**Certifications** — Google Data Analytics: Foundations · Agile Scrum Master (Techbase Vietnam)
+
+---
+
+<div align="center">
+
+*Got a product that needs a BA who goes backstage?*
+**[Send me the brief →](mailto:baohandao2303@gmail.com)** &nbsp;·&nbsp; **[See the full show →](https://dao-thuy-bao-han.kamila-comme.workers.dev)**
+
+</div>
