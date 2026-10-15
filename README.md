@@ -276,18 +276,23 @@ flowchart LR
 
 </details>
 
-### [TaskFlow](https://github.com/handao2303/taskflow-saas-metrics) — SaaS metrics leadership can act on
-A raw Stripe-style ledger → 8 SaaS metrics reconciled to **$0 variance**. Finding: MRR grew **~70x** but NRR was only **98.7%**; Referral LTV:CAC **28.7 : 1** vs Paid Ads 2.0 : 1 — written as Finding → So what → Recommendation. *Python · pandas · Streamlit*
+### [KKBox Subscription Analytics](https://github.com/handao2303/taskflow-saas-metrics) — 430M rows of billing logs, no metric pre-computed
+**Problem** — revenue keeps growing, but where is it leaking, which users are worth keeping, and what should the business fix first?
+MRR, churn, NRR, cohorts and LTV rebuilt from **23M payments and 410M listening logs** (32 GB → 8.2 GB Parquet with DuckDB), with every metric definition and analysis decision written down. Findings: MRR **104.5M → 151.1M NTD (+44.5%)** yet NRR **94.8%** — the base shrinks ~5% a month; **15% of paid churn is payment-partner outages**, not users leaving; auto-renew users are worth **3.6×** manual payers. Tracked phase by phase in Jira — churn model and dashboard in progress. *Python · DuckDB · Parquet · Streamlit*
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/handao2303/taskflow-saas-metrics/master/docs/images/mrr_bridge.png" width="680" alt="KKBox monthly MRR bridge: new, reactivation, expansion, contraction, churn and billing-gap churn" />
+</div>
 
 <details>
 <summary><b>Diagram</b></summary>
 
 ```mermaid
 flowchart LR
-    L["Raw event ledger"]:::in --> P["4-stage pipeline<br/>6/6 data-quality checks"]:::hub
-    P --> M["8 core metrics<br/>reconciled to $0"]:::step
-    M --> D["Dashboard<br/>growth · retention · unit economics"]:::step
-    D --> R(["Finding → So what → Recommendation"]):::out
+    R["Raw export<br/>23M payments · 410M logs"]:::in --> P["DuckDB pipeline<br/>Parquet · data-quality log"]:::hub
+    P --> S["User × month snapshot<br/>24.9M rows"]:::step
+    S --> M["MRR bridge · churn split<br/>cohorts · LTV"]:::step
+    M --> F(["Finding → So what<br/>auto-renew = largest LTV lever"]):::out
     classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
     classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
     classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
