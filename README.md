@@ -219,6 +219,8 @@ flowchart LR
 **Problem** — trip memories with no map, discovery not tied to location, and no reason to go again.
 Check in on a map, follow journeys, earn XP and badges, and collect a stamp for every province on a digital travel passport. Product documentation in the [hub repo](https://github.com/handao2303/checkpoint-app): problem framing, a **7-phase, 16-feature roadmap** with an explicit “won’t do” list, a plan per feature and a status log kept current. Go API · React PWA · PostGIS · Cloud Run — about **$0 a month** to run.
 
+**Source:** [docs & design](https://github.com/handao2303/checkpoint-app) · [Go backend](https://github.com/handao2303/checkpoint-app-go) · [React web](https://github.com/handao2303/checkpoint-app-reactjs) · [React Native](https://github.com/handao2303/checkpoint-app-rn) · [Flutter](https://github.com/handao2303/checkpoint-app-flutter)
+
 ```mermaid
 flowchart LR
     U1["Check in<br/>GPS + photo / video"]:::in --> API
