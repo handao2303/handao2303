@@ -263,7 +263,25 @@ An online drug-prevention law contest for **Tân Thành and Long Hoa** (Tây Nin
 ### GETA Catalog — three divisions, one admin
 A catalog for logo-printed cups, factory-price furniture and advertising, each with its own look on one shared back office; quotes are calculated automatically and exported as PDF. *Next.js · Prisma · PostgreSQL · NextAuth · react-pdf*
 
-<sub>Also at GETA: a shared sign-in portal with per-module access, a customised multi-account Zalo CRM (Vue 3), Geta Studio for scheduled posting across many TikTok accounts, and an SEO platform that audits the company’s WordPress sites and applies approved fixes (FastAPI · Celery · Next.js).</sub>
+### Everything I built at GETA · *Sep → Nov 2026*
+The full set, all running for GETA’s sales and marketing teams. Internal tools sit behind the company sign-in, so their links open a login page.
+
+| Project | What it does | Stack | Link |
+|---|---|---|---|
+| **AutoContent** | Social automation for 306 fanpages: posting, group posting, inbox + AI sales bot, appointments, quotes, invoices, photo and Reels libraries | Node.js · Express · Puppeteer · Graph API · OpenAI / Gemini · ffmpeg | [content.auto.cuonggeta.com](https://content.auto.cuonggeta.com) 🔒 |
+| **GETA Portal** | One sign-in for every tool, signed cookies across subdomains, per-module access, Zalo auto-reply bot, webhook bridge, orders into Zalo groups | Node.js · Express · HMAC cookies | [auto.cuonggeta.com](https://auto.cuonggeta.com) 🔒 |
+| **ZaloCRM** (customised) | Multi-account personal Zalo chat, customer tags, reports; open-source server patched at build time so upstream updates still apply | Vue 3 · Vuetify · Pinia · Socket.IO | internal |
+| **Geta House** | Homestay booking: 4 steps, room hold, VietQR, bookings to Zalo, SEO room pages | WordPress theme (PHP) · REST API · JSON-LD | [home.cuonggeta.com](https://home.cuonggeta.com) |
+| **SEO Platform** | SEO health scans, Search Console rankings, approved auto-fixes on WordPress, uptime and SSL monitoring | FastAPI · SQLAlchemy · Celery · Redis · PostgreSQL · Next.js | [seo.auto.cuonggeta.com](https://seo.auto.cuonggeta.com) 🔒 |
+| **GETA SEO v2** | Rebuild around Site Explorer, Rank Tracker and Site Audit | Next.js · React Query · FastAPI | in development |
+| **Geta Studio** | Many TikTok channels, N videos × M accounts on a schedule | Node.js · TypeScript · Vite · Playwright · TikTok Content Posting API | [studio.auto.cuonggeta.com](https://studio.auto.cuonggeta.com) 🔒 |
+| **GETA Catalog** | Cups, furniture and advertising catalogs on one admin, automatic quotes as PDF | Next.js · Prisma · PostgreSQL · NextAuth · react-pdf | internal |
+| **Founder profile sites** | Two capability sites for Bui Duc Cuong — interior and advertising — with scroll animation | Static HTML / CSS / JS · Cloudflare Workers | [interior](https://cuong-geta.kamila-comme.workers.dev) · [advertising](https://cuong-geta-quang-cao.kamila-comme.workers.dev) |
+| **AI Office & Assistant** | An orchestrator bot that hands work to specialist bots; an assistant that drafts messages for admin approval | Node.js 22 · node:sqlite · Express | internal |
+| **ERP CRM Service** | CRM whose AI learns from admin reviews, with a visual price table | NestJS · Prisma · LangChain (OpenAI, Gemini) | internal |
+| **GETA CLAW** | Master agent driven from Telegram that writes and publishes blog posts | Python · Alembic · web front end | internal |
+
+🔒 = staff sign-in required.
 
 ### [Checkpoint](https://github.com/handao2303/checkpoint-app) — travel social app for Vietnam · [live ↗](https://checkpoint-app.space)
 
