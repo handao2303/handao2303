@@ -1,7 +1,5 @@
 <div align="center">
 
-<a href="https://dao-thuy-bao-han.kamila-comme.workers.dev"><img src="assets/profile-card.gif" width="300" alt="About me card: Han Dao, Business Analyst — user stories, workflow optimization" /></a>
-
 # Dao Thuy Bao Han
 
 **Business Analyst · ERP, Fintech & EdTech**
@@ -24,8 +22,9 @@
 |---|---|
 | **Role** | Business Analyst — discovery → BRD → UI → UAT → go-live |
 | **Industries** | ERP · Fintech · EdTech · Data |
-| **Now** | Business Analyst at **Geta Technology** — Geta Finance (ERP) and Geta Media (sales & content portal) |
+| **Now** | Business Analyst & builder at **Geta Technology** — Geta Finance (ERP), Geta Media (sales & content portal) and the tools behind them |
 | **Proof in numbers** | 3 BRDs · 40 + 30 requirements · 35 business rules · 18 use cases · 18 Gherkin stories · a platform live for ~1,000 students |
+| **Built & shipped** | 6 systems in daily use · 306 fanpages automated · 2,039 commits and 1,135 pull requests in 8 weeks (Sep – Nov 2026) |
 | **Education** | B.Sc. Computer Science, Ton Duc Thang University (2022 – 2026) |
 
 ### How I work
@@ -61,18 +60,20 @@ flowchart LR
 ## 🎤 Experience
 
 ### Geta Technology — Business Analyst · *May 2026 → now*
-A multi-industry group (F&B, advertising, interior) selling across **8 business lines** through **83 Facebook fanpages** and Zalo. I own requirements and quality for its two internal products.
+A multi-industry group (F&B, advertising, interior) selling across **8 business lines** through **306 Facebook fanpages** and Zalo. I own requirements and quality for its two internal products — and since September 2026 I also build and run them.
 
-**Problem** — 83 inboxes with no single view; one customer scattered across pages; the same price questions typed by hand; every confirmed order re-entered 2–3 times; stock, sales, cash, timekeeping and payroll in separate spreadsheets.
+**Problem** — 306 inboxes with no single view; one customer scattered across pages; the same price questions typed by hand; every confirmed order re-entered 2–3 times; stock, sales, cash, timekeeping and payroll in separate spreadsheets.
 
 - **Geta Media** — one portal, one sign-in, 9 tools: a shared inbox for every fanpage and Zalo, one profile per customer (merged by phone number), a bot with 3 modes that **never quotes a price on its own**, and chat → appointment → quote → invoice in a few clicks. AI-written content and website fixes pass the same human approval gate.
 - **Geta Finance (ERP)** — mapped the operating flow *Inventory → Sales & Revenue → Income & Expense → Timekeeping → Payroll* and split it into **7 role-based workspaces**; each order moves through **7 stages** from site measurement to handover.
 - **Media → ERP contract** — confirmed orders reach the ERP as signed events (4 event types, HMAC signature, idempotency key, retries 1 → 180 min), so nothing is entered twice.
 - **Quality** — functional testing and UAT before every release; fixes verified with developers to protect live finance, stock and payroll data.
+- **Build & run** — from September 2026 I build what I specify, working with an AI pair programmer (Claude): **2,039 commits and 1,135 pull requests in 8 weeks**. Six systems now run every day — the AutoContent engine, a shared sign-in portal, a multi-account Zalo CRM, Geta Studio (TikTok), an SEO platform and the Geta House booking site — all in Docker, built and deployed on every merge.
+- **How changes ship** — one branch and one pull request per task (what changed, why, how it was checked); automated tests (node:test, pytest) run in CI before any merge; tried on a local Docker copy first, backed up before big moves, re-checked on the live system, and announced to staff in a “What’s new” note.
 
 ```mermaid
 flowchart TB
-    CH["Where customers are<br/>83 fanpages · Zalo · WordPress sites · TikTok / YouTube"]:::in
+    CH["Where customers are<br/>306 fanpages · Zalo · WordPress sites · TikTok / YouTube"]:::in
     CH --> S["Sales & care<br/>inbox · CRM · bot"]:::hub
     CH --> C["Content<br/>AI draft · schedule"]:::hub
     CH --> W["Web & SEO<br/>audit · fixes"]:::hub
@@ -210,6 +211,60 @@ flowchart LR
     style EN fill:#FAFAF7,stroke:#D6DCD5
 ```
 
+### AutoContent — social automation for 306 fanpages · *GETA, Sep → Nov 2026*
+**Problem** — posting, replying to customers and managing hundreds of fanpages and Facebook groups by hand took many people, and things slipped through.
+One engine runs Facebook, Instagram, Threads, Pinterest, YouTube and TikTok for **306 fanpages across 6 accounts**, with **~70 business modules**: posting schedules arranged by each page’s industry; group posting as a Fanpage capped at **1 post per group per day** with **5 rotating variants**; a photo library that stamps the shop’s phone number; a Reels pipeline (HD download → H.264 → music → intro / outro, in bulk); and a Messenger / Zalo inbox with an AI bot that drafts or sends replies. Graph API first, Puppeteer only where the API stops. **306 / 306 pages** hold working posting and messaging tokens. *Node.js · Express · Puppeteer · Facebook Graph API · OpenAI / Gemini · ffmpeg · sharp*
+
+<details>
+<summary><b>Diagram</b></summary>
+
+```mermaid
+flowchart LR
+    P["306 fanpages · groups<br/>Instagram · Threads · Pinterest<br/>YouTube · TikTok"]:::in --> E
+    E["AutoContent<br/>schedule by industry · group rules<br/>photo & Reels libraries · inbox + AI bot"]:::hub
+    E --> A["Graph API first"]:::step
+    E --> B["Puppeteer where the API stops"]:::step
+    A & B --> O1(["Posts out on schedule"]):::out
+    E --> O2(["Appointments · quotes · invoices"]):::out
+    E --> O3(["Orders to Zalo groups"]):::out
+    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
+    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
+    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
+    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
+```
+
+</details>
+
+### Geta House — direct homestay bookings · [live ↗](https://home.cuonggeta.com)
+**Problem** — the homestay needed to take bookings and payment itself, never sell the same night twice, and still be found on Google.
+A custom WordPress theme with stock **per room per night** and a database lock (MySQL `GET_LOCK`) around every booking; a **4-step** booking window with a **12-hour** room hold; **3 ways to pay** (full transfer or 50% deposit by VietQR, or cash). Each booking sends an **HMAC-SHA256-signed webhook** to the portal, which posts it to the team’s Zalo group and creates an appointment. Every room has its own page with LodgingBusiness, HotelRoom, Offer and FAQPage schema. Pages load in **~0.4–0.5 s**; no booking is typed in by hand. *WordPress (PHP) · REST API · vanilla JS · JSON-LD*
+
+<details>
+<summary><b>Diagram</b></summary>
+
+```mermaid
+flowchart LR
+    G["Guest<br/>room page on Google"]:::in --> B["4-step booking<br/>stock per night · GET_LOCK · 12 h hold"]:::hub
+    B --> P["Pay<br/>VietQR full · 50% deposit · cash"]:::step
+    P --> W{{"Signed webhook · HMAC-SHA256"}}:::gate
+    W --> Z(["Zalo group + appointment<br/>nothing typed by hand"]):::out
+    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
+    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
+    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
+    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
+    classDef gate fill:#FFFFFF,stroke:#D9B1AB,stroke-width:2px,stroke-dasharray:5 4,color:#23281F
+```
+
+</details>
+
+### PCMT Law Quiz — a fair online contest for two communes · [live ↗](https://pcmt-quiz.vercel.app)
+An online drug-prevention law contest for **Tân Thành and Long Hoa** (Tây Ninh): **10 random questions** from a 30-question bank, a **15-minute** timer that auto-submits, a public leaderboard that shows only names and prizes, and a log of every admin change. Serverless on Vercel with Neon Postgres — no server to run. *React · Hono · Zod · JWT*
+
+### GETA Catalog — three divisions, one admin
+A catalog for logo-printed cups, factory-price furniture and advertising, each with its own look on one shared back office; quotes are calculated automatically and exported as PDF. *Next.js · Prisma · PostgreSQL · NextAuth · react-pdf*
+
+<sub>Also at GETA: a shared sign-in portal with per-module access, a customised multi-account Zalo CRM (Vue 3), Geta Studio for scheduled posting across many TikTok accounts, and an SEO platform that audits the company’s WordPress sites and applies approved fixes (FastAPI · Celery · Next.js).</sub>
+
 ### [Checkpoint](https://github.com/handao2303/checkpoint-app) — travel social app for Vietnam · [live ↗](https://checkpoint-app.space)
 
 <div align="center">
@@ -329,6 +384,20 @@ flowchart LR
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![React](https://img.shields.io/badge/React-087EA4?style=flat-square&logo=react&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+
+**Build** &nbsp;
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-FF4438?style=flat-square&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=flat-square&logo=puppeteer&logoColor=white)
+![Facebook Graph API](https://img.shields.io/badge/Facebook%20Graph%20API-0866FF?style=flat-square&logo=facebook&logoColor=white)
+![Zalo](https://img.shields.io/badge/Zalo%20OA-0068FF?style=flat-square&logo=zalo&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI%20%2F%20Gemini-412991?style=flat-square&logo=openai&logoColor=white)
 
 **Certifications** — Google Data Analytics: Foundations (Google) · Agile Scrum Master (Techbase Vietnam)
 
