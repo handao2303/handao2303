@@ -26,6 +26,7 @@
 | **Proof in numbers** | 3 BRDs · 40 + 30 requirements · 35 business rules · 18 use cases · 18 Gherkin stories · a platform live for ~1,000 students |
 | **Built & shipped** | 6 systems in daily use · 306 fanpages automated · 2,039 commits and 1,135 pull requests in 8 weeks (Sep – Nov 2026) |
 | **Education** | B.Sc. Computer Science, Ton Duc Thang University (2022 – 2026) |
+| **English** | IELTS 7.0 |
 
 ### 🎫 Tour dates — the BA journey so far
 
@@ -265,7 +266,7 @@ flowchart LR
 
 ## 🎬 Projects
 
-### Banking Automation System — Lead BA
+### Banking Automation System — Business Analyst · *self-initiated case study*
 **Problem** — account opening checked by hand against disconnected CIC/AML portals; reconciliation in Excel; card limits updated in an end-of-day batch with no concurrency control.
 A BRD that automates all three: **30 requirements, 18 use cases, 26 business rules, 18 Gherkin user stories**. The AML/PEP rule is independent and non-overridable; the race-condition risk became a measurable **< 2 s response SLA**. Scope: Circular 17/2024/TT-NHNN, ISO 20022 / 8583, PCI DSS. eKYC demo on the [portfolio](https://dao-thuy-bao-han.kamila-comme.workers.dev).
 
