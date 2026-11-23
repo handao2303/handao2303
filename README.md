@@ -27,6 +27,17 @@
 | **Built & shipped** | 6 systems in daily use · 306 fanpages automated · 2,039 commits and 1,135 pull requests in 8 weeks (Sep – Nov 2026) |
 | **Education** | B.Sc. Computer Science, Ton Duc Thang University (2022 – 2026) |
 
+### 🎫 Tour dates — the BA journey so far
+
+| When | Stop | Role | |
+|---|---|---|---|
+| 2023 | **Pulse Active** | Data Analyst Intern — race data for 10,000+ runners | ✔ Played |
+| 2024 | **MindX Technology School** | Coding & Robotics Instructor | ● On stage |
+| 2025 | **International Link (Saigon Language School)** | Business Analyst & Tester | ✔ Played |
+| 2025 | **PiStudy** | BA & UI/UX Designer (freelance) | ✔ Played |
+| 2026 | **Geta Technology** | Business Analyst & builder | ● On stage |
+| Next | **The global stage** | Senior Business Analyst | 🎟 Tickets soon |
+
 ### How I work
 Every engagement starts from the problem, not the feature list — and every requirement stays traceable to the test that proves it.
 
@@ -100,6 +111,80 @@ flowchart TB
 
 **Outcome** — one portal for all 8 business lines; a confirmed chat becomes an appointment, an invoice and an ERP order in a few clicks; finance reports come from one flow instead of spreadsheets.
 
+<details>
+<summary><b>🔧 What I built at GETA · Sep → Nov 2026</b></summary>
+
+#### AutoContent — social automation for 306 fanpages · *GETA, Sep → Nov 2026*
+**Problem** — posting, replying to customers and managing hundreds of fanpages and Facebook groups by hand took many people, and things slipped through.
+One engine runs Facebook, Instagram, Threads, Pinterest, YouTube and TikTok for **306 fanpages across 6 accounts**, with **~70 business modules**: posting schedules arranged by each page’s industry; group posting as a Fanpage capped at **1 post per group per day** with **5 rotating variants**; a photo library that stamps the shop’s phone number; a Reels pipeline (HD download → H.264 → music → intro / outro, in bulk); and a Messenger / Zalo inbox with an AI bot that drafts or sends replies. Graph API first, Puppeteer only where the API stops. **306 / 306 pages** hold working posting and messaging tokens. *Node.js · Express · Puppeteer · Facebook Graph API · OpenAI / Gemini · ffmpeg · sharp*
+
+<details>
+<summary><b>Diagram</b></summary>
+
+```mermaid
+flowchart LR
+    P["306 fanpages · groups<br/>Instagram · Threads · Pinterest<br/>YouTube · TikTok"]:::in --> E
+    E["AutoContent<br/>schedule by industry · group rules<br/>photo & Reels libraries · inbox + AI bot"]:::hub
+    E --> A["Graph API first"]:::step
+    E --> B["Puppeteer where the API stops"]:::step
+    A & B --> O1(["Posts out on schedule"]):::out
+    E --> O2(["Appointments · quotes · invoices"]):::out
+    E --> O3(["Orders to Zalo groups"]):::out
+    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
+    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
+    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
+    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
+```
+
+</details>
+
+#### Geta House — direct homestay bookings · [live ↗](https://home.cuonggeta.com)
+**Problem** — the homestay needed to take bookings and payment itself, never sell the same night twice, and still be found on Google.
+A custom WordPress theme with stock **per room per night** and a database lock (MySQL `GET_LOCK`) around every booking; a **4-step** booking window with a **12-hour** room hold; **3 ways to pay** (full transfer or 50% deposit by VietQR, or cash). Each booking sends an **HMAC-SHA256-signed webhook** to the portal, which posts it to the team’s Zalo group and creates an appointment. Every room has its own page with LodgingBusiness, HotelRoom, Offer and FAQPage schema. Pages load in **~0.4–0.5 s**; no booking is typed in by hand. *WordPress (PHP) · REST API · vanilla JS · JSON-LD*
+
+<details>
+<summary><b>Diagram</b></summary>
+
+```mermaid
+flowchart LR
+    G["Guest<br/>room page on Google"]:::in --> B["4-step booking<br/>stock per night · GET_LOCK · 12 h hold"]:::hub
+    B --> P["Pay<br/>VietQR full · 50% deposit · cash"]:::step
+    P --> W{{"Signed webhook · HMAC-SHA256"}}:::gate
+    W --> Z(["Zalo group + appointment<br/>nothing typed by hand"]):::out
+    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
+    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
+    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
+    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
+    classDef gate fill:#FFFFFF,stroke:#D9B1AB,stroke-width:2px,stroke-dasharray:5 4,color:#23281F
+```
+
+</details>
+
+#### GETA Catalog — three divisions, one admin
+A catalog for logo-printed cups, factory-price furniture and advertising, each with its own look on one shared back office; quotes are calculated automatically and exported as PDF. *Next.js · Prisma · PostgreSQL · NextAuth · react-pdf*
+
+#### All GETA builds at a glance
+The full set, all running for GETA’s sales and marketing teams. Internal tools sit behind the company sign-in, so their links open a login page.
+
+| Project | What it does | Stack | Link |
+|---|---|---|---|
+| **AutoContent** | Social automation for 306 fanpages: posting, group posting, inbox + AI sales bot, appointments, quotes, invoices, photo and Reels libraries | Node.js · Express · Puppeteer · Graph API · OpenAI / Gemini · ffmpeg | [content.auto.cuonggeta.com](https://content.auto.cuonggeta.com) 🔒 |
+| **GETA Portal** | One sign-in for every tool, signed cookies across subdomains, per-module access, Zalo auto-reply bot, webhook bridge, orders into Zalo groups | Node.js · Express · HMAC cookies | [auto.cuonggeta.com](https://auto.cuonggeta.com) 🔒 |
+| **ZaloCRM** (customised) | Multi-account personal Zalo chat, customer tags, reports; open-source server patched at build time so upstream updates still apply | Vue 3 · Vuetify · Pinia · Socket.IO | internal |
+| **Geta House** | Homestay booking: 4 steps, room hold, VietQR, bookings to Zalo, SEO room pages | WordPress theme (PHP) · REST API · JSON-LD | [home.cuonggeta.com](https://home.cuonggeta.com) |
+| **SEO Platform** | SEO health scans, Search Console rankings, approved auto-fixes on WordPress, uptime and SSL monitoring | FastAPI · SQLAlchemy · Celery · Redis · PostgreSQL · Next.js | [seo.auto.cuonggeta.com](https://seo.auto.cuonggeta.com) 🔒 |
+| **GETA SEO v2** | Rebuild around Site Explorer, Rank Tracker and Site Audit | Next.js · React Query · FastAPI | in development |
+| **Geta Studio** | Many TikTok channels, N videos × M accounts on a schedule | Node.js · TypeScript · Vite · Playwright · TikTok Content Posting API | [studio.auto.cuonggeta.com](https://studio.auto.cuonggeta.com) 🔒 |
+| **GETA Catalog** | Cups, furniture and advertising catalogs on one admin, automatic quotes as PDF | Next.js · Prisma · PostgreSQL · NextAuth · react-pdf | internal |
+| **Founder profile sites** | Two capability sites for Bui Duc Cuong — interior and advertising — with scroll animation | Static HTML / CSS / JS · Cloudflare Workers | [interior](https://cuong-geta.kamila-comme.workers.dev) · [advertising](https://cuong-geta-quang-cao.kamila-comme.workers.dev) |
+| **AI Office & Assistant** | An orchestrator bot that hands work to specialist bots; an assistant that drafts messages for admin approval | Node.js 22 · node:sqlite · Express | internal |
+| **ERP CRM Service** | CRM whose AI learns from admin reviews, with a visual price table | NestJS · Prisma · LangChain (OpenAI, Gemini) | internal |
+| **GETA CLAW** | Master agent driven from Telegram that writes and publishes blog posts | Python · Alembic · web front end | internal |
+
+🔒 = staff sign-in required.
+
+</details>
+
 ### International Link Corporation (Saigon Language School) — BA & Tester · *May 2025 → May 2026*
 **Problem** — scheduling, enrollment and file access for **60+ instructors, ~4,000 learners and 30 corporate classes** ran on spreadsheets and shared OneDrive folders, with no single source of truth.
 
@@ -137,7 +222,7 @@ flowchart LR
 ```
 
 ### Pulse Active — Data Analyst Intern · *2023 → 2024*
-Cleaned and reconciled registration data for marathons of **10,000+ and 9,000+ runners** — catching duplicates and payment mismatches **before race day** — and built the dashboards leadership used for go / no-go decisions.
+Cleaned and reconciled registration data for marathons of **10,000+ and 9,000+ runners** — catching duplicates and payment mismatches **before race day** — and built the dashboards leadership used for go / no-go decisions. *Python · Excel · Tableau*
 
 <details>
 <summary><b>Diagram</b></summary>
@@ -156,7 +241,7 @@ flowchart LR
 </details>
 
 ### MindX Technology School — Coding & Robotics Instructor (part-time) · *Mar 2024 → now*
-~30 classes, ~210–240 students aged 4–18, **100% course completion**. Sole point of contact for parents — the same loop a BA runs with stakeholders.
+~30 classes, ~210–240 students aged 4–18, **100% course completion**, taught in **Scratch, GameMaker, Python and Java** plus LEGO and VEX robotics. Sole point of contact for parents — the same loop a BA runs with stakeholders.
 
 <details>
 <summary><b>Diagram</b></summary>
@@ -211,77 +296,8 @@ flowchart LR
     style EN fill:#FAFAF7,stroke:#D6DCD5
 ```
 
-### AutoContent — social automation for 306 fanpages · *GETA, Sep → Nov 2026*
-**Problem** — posting, replying to customers and managing hundreds of fanpages and Facebook groups by hand took many people, and things slipped through.
-One engine runs Facebook, Instagram, Threads, Pinterest, YouTube and TikTok for **306 fanpages across 6 accounts**, with **~70 business modules**: posting schedules arranged by each page’s industry; group posting as a Fanpage capped at **1 post per group per day** with **5 rotating variants**; a photo library that stamps the shop’s phone number; a Reels pipeline (HD download → H.264 → music → intro / outro, in bulk); and a Messenger / Zalo inbox with an AI bot that drafts or sends replies. Graph API first, Puppeteer only where the API stops. **306 / 306 pages** hold working posting and messaging tokens. *Node.js · Express · Puppeteer · Facebook Graph API · OpenAI / Gemini · ffmpeg · sharp*
-
-<details>
-<summary><b>Diagram</b></summary>
-
-```mermaid
-flowchart LR
-    P["306 fanpages · groups<br/>Instagram · Threads · Pinterest<br/>YouTube · TikTok"]:::in --> E
-    E["AutoContent<br/>schedule by industry · group rules<br/>photo & Reels libraries · inbox + AI bot"]:::hub
-    E --> A["Graph API first"]:::step
-    E --> B["Puppeteer where the API stops"]:::step
-    A & B --> O1(["Posts out on schedule"]):::out
-    E --> O2(["Appointments · quotes · invoices"]):::out
-    E --> O3(["Orders to Zalo groups"]):::out
-    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
-    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
-    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
-    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
-```
-
-</details>
-
-### Geta House — direct homestay bookings · [live ↗](https://home.cuonggeta.com)
-**Problem** — the homestay needed to take bookings and payment itself, never sell the same night twice, and still be found on Google.
-A custom WordPress theme with stock **per room per night** and a database lock (MySQL `GET_LOCK`) around every booking; a **4-step** booking window with a **12-hour** room hold; **3 ways to pay** (full transfer or 50% deposit by VietQR, or cash). Each booking sends an **HMAC-SHA256-signed webhook** to the portal, which posts it to the team’s Zalo group and creates an appointment. Every room has its own page with LodgingBusiness, HotelRoom, Offer and FAQPage schema. Pages load in **~0.4–0.5 s**; no booking is typed in by hand. *WordPress (PHP) · REST API · vanilla JS · JSON-LD*
-
-<details>
-<summary><b>Diagram</b></summary>
-
-```mermaid
-flowchart LR
-    G["Guest<br/>room page on Google"]:::in --> B["4-step booking<br/>stock per night · GET_LOCK · 12 h hold"]:::hub
-    B --> P["Pay<br/>VietQR full · 50% deposit · cash"]:::step
-    P --> W{{"Signed webhook · HMAC-SHA256"}}:::gate
-    W --> Z(["Zalo group + appointment<br/>nothing typed by hand"]):::out
-    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
-    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
-    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
-    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
-    classDef gate fill:#FFFFFF,stroke:#D9B1AB,stroke-width:2px,stroke-dasharray:5 4,color:#23281F
-```
-
-</details>
-
 ### PCMT Law Quiz — a fair online contest for two communes · [live ↗](https://pcmt-quiz.vercel.app)
 An online drug-prevention law contest for **Tân Thành and Long Hoa** (Tây Ninh): **10 random questions** from a 30-question bank, a **15-minute** timer that auto-submits, a public leaderboard that shows only names and prizes, and a log of every admin change. Serverless on Vercel with Neon Postgres — no server to run. *React · Hono · Zod · JWT*
-
-### GETA Catalog — three divisions, one admin
-A catalog for logo-printed cups, factory-price furniture and advertising, each with its own look on one shared back office; quotes are calculated automatically and exported as PDF. *Next.js · Prisma · PostgreSQL · NextAuth · react-pdf*
-
-### Everything I built at GETA · *Sep → Nov 2026*
-The full set, all running for GETA’s sales and marketing teams. Internal tools sit behind the company sign-in, so their links open a login page.
-
-| Project | What it does | Stack | Link |
-|---|---|---|---|
-| **AutoContent** | Social automation for 306 fanpages: posting, group posting, inbox + AI sales bot, appointments, quotes, invoices, photo and Reels libraries | Node.js · Express · Puppeteer · Graph API · OpenAI / Gemini · ffmpeg | [content.auto.cuonggeta.com](https://content.auto.cuonggeta.com) 🔒 |
-| **GETA Portal** | One sign-in for every tool, signed cookies across subdomains, per-module access, Zalo auto-reply bot, webhook bridge, orders into Zalo groups | Node.js · Express · HMAC cookies | [auto.cuonggeta.com](https://auto.cuonggeta.com) 🔒 |
-| **ZaloCRM** (customised) | Multi-account personal Zalo chat, customer tags, reports; open-source server patched at build time so upstream updates still apply | Vue 3 · Vuetify · Pinia · Socket.IO | internal |
-| **Geta House** | Homestay booking: 4 steps, room hold, VietQR, bookings to Zalo, SEO room pages | WordPress theme (PHP) · REST API · JSON-LD | [home.cuonggeta.com](https://home.cuonggeta.com) |
-| **SEO Platform** | SEO health scans, Search Console rankings, approved auto-fixes on WordPress, uptime and SSL monitoring | FastAPI · SQLAlchemy · Celery · Redis · PostgreSQL · Next.js | [seo.auto.cuonggeta.com](https://seo.auto.cuonggeta.com) 🔒 |
-| **GETA SEO v2** | Rebuild around Site Explorer, Rank Tracker and Site Audit | Next.js · React Query · FastAPI | in development |
-| **Geta Studio** | Many TikTok channels, N videos × M accounts on a schedule | Node.js · TypeScript · Vite · Playwright · TikTok Content Posting API | [studio.auto.cuonggeta.com](https://studio.auto.cuonggeta.com) 🔒 |
-| **GETA Catalog** | Cups, furniture and advertising catalogs on one admin, automatic quotes as PDF | Next.js · Prisma · PostgreSQL · NextAuth · react-pdf | internal |
-| **Founder profile sites** | Two capability sites for Bui Duc Cuong — interior and advertising — with scroll animation | Static HTML / CSS / JS · Cloudflare Workers | [interior](https://cuong-geta.kamila-comme.workers.dev) · [advertising](https://cuong-geta-quang-cao.kamila-comme.workers.dev) |
-| **AI Office & Assistant** | An orchestrator bot that hands work to specialist bots; an assistant that drafts messages for admin approval | Node.js 22 · node:sqlite · Express | internal |
-| **ERP CRM Service** | CRM whose AI learns from admin reviews, with a visual price table | NestJS · Prisma · LangChain (OpenAI, Gemini) | internal |
-| **GETA CLAW** | Master agent driven from Telegram that writes and publishes blog posts | Python · Alembic · web front end | internal |
-
-🔒 = staff sign-in required.
 
 ### [Checkpoint](https://github.com/handao2303/checkpoint-app) — travel social app for Vietnam · [live ↗](https://checkpoint-app.space)
 
@@ -374,6 +390,62 @@ flowchart LR
 
 </details>
 
+### [Lexicode](https://github.com/handao2303/lexicode) — my study app: IELTS words + Code & Data · [live ↗](https://word-atlas-vi.vercel.app) *(invite only)*
+
+<div align="center">
+<a href="https://github.com/handao2303/lexicode"><img src="https://raw.githubusercontent.com/handao2303/lexicode/HEAD/docs/assets/cover-v2.jpg" width="680" alt="Lexicode: illustrated IELTS vocabulary and Code & Data study paths" /></a>
+</div>
+
+**Problem** — vocabulary in one app, LeetCode in a tab, SQL practice somewhere else, no shared review schedule — and the best illustrated IELTS app had no Vietnamese.
+**7,298 illustrated IELTS words** with Vietnamese meanings for all **13,733 senses**, plus three Code & Data paths — **54 LeetCode problems** in 14 tracks, **10 SQL-for-BA lessons** with an in-browser SQLite sandbox and **9 data-engineering modules** — all scheduled by FSRS spaced repetition. Google sign-in on an allow-list, cross-device sync with a conflict-free merge and a weekly leaderboard; **37k media files** served from a CDN so it fits Vercel's free tier. Word base credited to the open-source Word Atlas project; every other source license checked. *React 19 · TypeScript · Vite · Supabase · sql.js · FSRS*
+
+<details>
+<summary><b>Diagram</b></summary>
+
+```mermaid
+flowchart LR
+    W["7,298 IELTS words<br/>illustration · audio · Vietnamese"]:::in --> L
+    C["Code & Data<br/>LeetCode · SQL for BA · DE"]:::in --> L
+    L["One study loop<br/>FSRS: due cards come back"]:::hub
+    L --> Q["Quizzes<br/>meaning · picture · listening · spelling"]:::step
+    L --> S["Sync & leaderboard<br/>allow-list sign-in · conflict-free merge"]:::step
+    Q & S --> O(["A daily habit for the group"]):::out
+    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
+    classDef step fill:#EDE8DC,stroke:#A5B68D,color:#23281F
+    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
+    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
+```
+
+</details>
+
+### [Non Sông Việt](https://github.com/handao2303/non-song-viet) — 2,700 years of Vietnamese history on one map · [live ↗](https://non-song-viet.vercel.app)
+
+<div align="center">
+<a href="https://non-song-viet.vercel.app/?year=1069&lang=vi"><img src="https://dao-thuy-bao-han.kamila-comme.workers.dev/media/nonsongviet-1069.jpg" width="680" alt="Non Sông Việt: the Lý dynasty in 1069 on the interactive map" /></a>
+</div>
+
+**Problem** — textbooks list dynasties and dates but not how far each one reached; popular sources disagree on years, and the original chronicles are in classical Chinese.
+Territory, capitals and **~95 dated events** change with the year from **700 BCE to today** — **24 periods**, **12 battles** animated on the map and **18 historical figures** to follow. Every date is checked against the original text of *Đại Việt sử ký toàn thư* and *Đại Nam thực lục* (which moved the name Đại Nam to 1838), and events outside the chronicles are labelled as such. Click any place to see who ruled it, compare two years side by side, and read each source line with a Sino-Vietnamese reading. Vietnamese / English. *React 19 · TypeScript · Vite · Tailwind CSS 4 · MapLibre GL · d3-geo*
+
+<details>
+<summary><b>Diagram</b></summary>
+
+```mermaid
+flowchart LR
+    S1["Toàn thư · Thực lục<br/>original text"]:::in --> D
+    S2["Open map data<br/>geoBoundaries · Natural Earth"]:::in --> D
+    D["One dated dataset<br/>province → region → year joined"]:::hub
+    D --> V1(["Map by year"]):::out
+    D --> V2(["Who ruled this place"]):::out
+    D --> V3(["Battles on the map"]):::out
+    D --> V4(["Compare two years"]):::out
+    classDef in fill:#F4F5F2,stroke:#5A6A63,color:#23281F
+    classDef hub fill:#E7CCCC,stroke:#23281F,color:#23281F
+    classDef out fill:#C1CFA1,stroke:#23281F,color:#23281F
+```
+
+</details>
+
 ---
 
 ## 🧰 Toolkit
@@ -398,10 +470,13 @@ flowchart LR
 ![draw.io](https://img.shields.io/badge/draw.io-F08705?style=flat-square&logo=diagramsdotnet&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![React](https://img.shields.io/badge/React-087EA4?style=flat-square&logo=react&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
 
 **Build** &nbsp;
 ![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
